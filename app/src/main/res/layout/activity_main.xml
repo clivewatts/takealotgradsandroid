@@ -28,6 +28,8 @@
             android:layout_height="match_parent">
 
         <LinearLayout
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
                 android:visibility="visible"
                 android:paddingTop="?attr/actionBarSize"
                 android:orientation="vertical"
