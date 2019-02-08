@@ -36,4 +36,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.koushikdutta.ion/ion
     implementation group: 'com.koushikdutta.ion', name: 'ion', version: '2.2.1'
 
+    //kotlin reflection to get Title fields because im lazy
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+
+
 }

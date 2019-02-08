@@ -2,13 +2,15 @@ package com.takealot.gradmoviesorter.api
 
 import android.content.Context
 import android.util.Log
+import android.widget.ImageView
 import com.koushikdutta.ion.Ion
 import com.takealot.gradmoviesorter.MainActivity
+import com.takealot.gradmoviesorter.R
 import com.takealot.gradmoviesorter.interfaces.Search
 
 object ApiHelper {
 
-    open fun doTitleSearch(context: Context, url:String, term:String) {
+    fun doTitleSearch(context: Context, url:String, term:String) {
 
         var useCaseReturn:Search = context as MainActivity
         //spaces to plus to conform to api
@@ -19,6 +21,13 @@ object ApiHelper {
             useCaseReturn.onTitleSearch(result.result)
         }
 
+    }
+
+    fun loadImageIntoView(context:Context, view:ImageView, url:String) {
+        Ion.with(context)
+            .load(url)
+            .withBitmap()
+            .intoImageView(view)
     }
 
 }
