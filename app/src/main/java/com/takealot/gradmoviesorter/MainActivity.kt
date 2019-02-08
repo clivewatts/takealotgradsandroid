@@ -30,10 +30,11 @@ class MainActivity : AppCompatActivity(), Search {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        setUpSearchInput()
+
         fab.setOnClickListener { view ->
             doSearch()
         }
-        setUpSearchInput()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
